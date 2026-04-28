@@ -2,7 +2,7 @@
 triple:          'arm64-apple-darwin'
 binary-path:     asteroids
 relocations:
-  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100002B50, symSize: 0x64 }
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100002B54, symSize: 0x64 }
   - { offset: 0x3F, size: 0x8, addend: 0x0, symName: _projectiles, symObjAddr: 0x133A0, symBinAddr: 0x100014280, symSize: 0x0 }
   - { offset: 0xB6, size: 0x8, addend: 0x0, symName: _asteroids, symObjAddr: 0x133C0, symBinAddr: 0x1000142A0, symSize: 0x0 }
   - { offset: 0x176, size: 0x8, addend: 0x0, symName: _score, symObjAddr: 0x133E0, symBinAddr: 0x1000142C0, symSize: 0x0 }
@@ -14,33 +14,33 @@ relocations:
   - { offset: 0x2FC, size: 0x8, addend: 0x0, symName: _puffs, symBinAddr: 0x100014340, symSize: 0x0 }
   - { offset: 0x384, size: 0x8, addend: 0x0, symName: _hole, symBinAddr: 0x100014304, symSize: 0x0 }
   - { offset: 0x3F1, size: 0x8, addend: 0x0, symName: _spawner, symBinAddr: 0x100014348, symSize: 0x0 }
-  - { offset: 0x401, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100002B50, symSize: 0x64 }
-  - { offset: 0x416, size: 0x8, addend: 0x0, symName: _on_reshape, symObjAddr: 0x64, symBinAddr: 0x100002BB4, symSize: 0x74 }
-  - { offset: 0x44B, size: 0x8, addend: 0x0, symName: _display, symObjAddr: 0xD8, symBinAddr: 0x100002C28, symSize: 0x3770 }
-  - { offset: 0x5E4, size: 0x8, addend: 0x0, symName: _keyboard, symObjAddr: 0x3848, symBinAddr: 0x100006398, symSize: 0xB04 }
-  - { offset: 0x646, size: 0x8, addend: 0x0, symName: _mouse, symObjAddr: 0x434C, symBinAddr: 0x100006E9C, symSize: 0x1D0 }
-  - { offset: 0x6A8, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x451C, symBinAddr: 0x10000706C, symSize: 0x2DC }
-  - { offset: 0x6E3, size: 0x8, addend: 0x0, symName: _init_spaceship, symObjAddr: 0x47F8, symBinAddr: 0x100007348, symSize: 0x324 }
-  - { offset: 0x709, size: 0x8, addend: 0x0, symName: _init_asteroid, symObjAddr: 0x4B1C, symBinAddr: 0x10000766C, symSize: 0xC6C }
-  - { offset: 0x75B, size: 0x8, addend: 0x0, symName: _free_projectiles, symObjAddr: 0x5798, symBinAddr: 0x1000082E8, symSize: 0x9C }
-  - { offset: 0x790, size: 0x8, addend: 0x0, symName: _free_asteroids, symObjAddr: 0x5834, symBinAddr: 0x100008384, symSize: 0x9C }
-  - { offset: 0x7C5, size: 0x8, addend: 0x0, symName: _init_particle_puff, symObjAddr: 0x58D0, symBinAddr: 0x100008420, symSize: 0x540 }
-  - { offset: 0x7EB, size: 0x8, addend: 0x0, symName: _init_projectile, symObjAddr: 0x5E10, symBinAddr: 0x100008960, symSize: 0x42C }
-  - { offset: 0x811, size: 0x8, addend: 0x0, symName: _update_game_state, symObjAddr: 0x623C, symBinAddr: 0x100008D8C, symSize: 0x3AC }
-  - { offset: 0x881, size: 0x8, addend: 0x0, symName: _update_projectile, symObjAddr: 0x65E8, symBinAddr: 0x100009138, symSize: 0x5F4 }
-  - { offset: 0x8B6, size: 0x8, addend: 0x0, symName: _update_asteroid, symObjAddr: 0x6BDC, symBinAddr: 0x10000972C, symSize: 0x12FC }
-  - { offset: 0x8EB, size: 0x8, addend: 0x0, symName: _update_puff, symObjAddr: 0x7ED8, symBinAddr: 0x10000AA28, symSize: 0x43C }
-  - { offset: 0x911, size: 0x8, addend: 0x0, symName: _update_player, symObjAddr: 0x8314, symBinAddr: 0x10000AE64, symSize: 0x13CC }
-  - { offset: 0x945, size: 0x8, addend: 0x0, symName: _init_asteroid_explosion, symObjAddr: 0x96E0, symBinAddr: 0x10000C230, symSize: 0x2C8 }
-  - { offset: 0x96B, size: 0x8, addend: 0x0, symName: _delete_projectile, symObjAddr: 0x99A8, symBinAddr: 0x10000C4F8, symSize: 0x198 }
-  - { offset: 0x9A0, size: 0x8, addend: 0x0, symName: _split_asteroid, symObjAddr: 0x9B40, symBinAddr: 0x10000C690, symSize: 0x1358 }
-  - { offset: 0xA4B, size: 0x8, addend: 0x0, symName: _delete_asteroid, symObjAddr: 0xAE98, symBinAddr: 0x10000D9E8, symSize: 0x198 }
-  - { offset: 0xA80, size: 0x8, addend: 0x0, symName: _delete_puff, symObjAddr: 0xB030, symBinAddr: 0x10000DB80, symSize: 0x204 }
-  - { offset: 0xAB5, size: 0x8, addend: 0x0, symName: _init_explosion, symObjAddr: 0xB234, symBinAddr: 0x10000DD84, symSize: 0x260 }
-  - { offset: 0xACB, size: 0x8, addend: 0x0, symName: _update_explosion, symObjAddr: 0xB494, symBinAddr: 0x10000DFE4, symSize: 0x9C }
-  - { offset: 0xAE1, size: 0x8, addend: 0x0, symName: _update_asteroid_explosion, symObjAddr: 0xB530, symBinAddr: 0x10000E080, symSize: 0x198 }
-  - { offset: 0xAF7, size: 0x8, addend: 0x0, symName: _on_idle, symObjAddr: 0xB6C8, symBinAddr: 0x10000E218, symSize: 0x18 }
-  - { offset: 0xB0D, size: 0x8, addend: 0x0, symName: _free_puff_linked_list, symObjAddr: 0xB6E0, symBinAddr: 0x10000E230, symSize: 0x11C }
-  - { offset: 0xB33, size: 0x8, addend: 0x0, symName: _init_black_hole, symObjAddr: 0xB7FC, symBinAddr: 0x10000E34C, symSize: 0x850 }
-  - { offset: 0xB59, size: 0x8, addend: 0x0, symName: _update_black_hole, symObjAddr: 0xC05C, symBinAddr: 0x10000EBAC, symSize: 0x7C0 }
+  - { offset: 0x401, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100002B54, symSize: 0x64 }
+  - { offset: 0x416, size: 0x8, addend: 0x0, symName: _on_reshape, symObjAddr: 0x64, symBinAddr: 0x100002BB8, symSize: 0x74 }
+  - { offset: 0x44B, size: 0x8, addend: 0x0, symName: _display, symObjAddr: 0xD8, symBinAddr: 0x100002C2C, symSize: 0x376C }
+  - { offset: 0x5E4, size: 0x8, addend: 0x0, symName: _keyboard, symObjAddr: 0x3844, symBinAddr: 0x100006398, symSize: 0xB04 }
+  - { offset: 0x646, size: 0x8, addend: 0x0, symName: _mouse, symObjAddr: 0x4348, symBinAddr: 0x100006E9C, symSize: 0x1D0 }
+  - { offset: 0x6A8, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4518, symBinAddr: 0x10000706C, symSize: 0x2DC }
+  - { offset: 0x6E3, size: 0x8, addend: 0x0, symName: _init_spaceship, symObjAddr: 0x47F4, symBinAddr: 0x100007348, symSize: 0x324 }
+  - { offset: 0x709, size: 0x8, addend: 0x0, symName: _init_asteroid, symObjAddr: 0x4B18, symBinAddr: 0x10000766C, symSize: 0xC6C }
+  - { offset: 0x75B, size: 0x8, addend: 0x0, symName: _free_projectiles, symObjAddr: 0x5794, symBinAddr: 0x1000082E8, symSize: 0x9C }
+  - { offset: 0x790, size: 0x8, addend: 0x0, symName: _free_asteroids, symObjAddr: 0x5830, symBinAddr: 0x100008384, symSize: 0x9C }
+  - { offset: 0x7C5, size: 0x8, addend: 0x0, symName: _init_particle_puff, symObjAddr: 0x58CC, symBinAddr: 0x100008420, symSize: 0x540 }
+  - { offset: 0x7EB, size: 0x8, addend: 0x0, symName: _init_projectile, symObjAddr: 0x5E0C, symBinAddr: 0x100008960, symSize: 0x42C }
+  - { offset: 0x811, size: 0x8, addend: 0x0, symName: _update_game_state, symObjAddr: 0x6238, symBinAddr: 0x100008D8C, symSize: 0x3AC }
+  - { offset: 0x881, size: 0x8, addend: 0x0, symName: _update_projectile, symObjAddr: 0x65E4, symBinAddr: 0x100009138, symSize: 0x5F4 }
+  - { offset: 0x8B6, size: 0x8, addend: 0x0, symName: _update_asteroid, symObjAddr: 0x6BD8, symBinAddr: 0x10000972C, symSize: 0x12FC }
+  - { offset: 0x8EB, size: 0x8, addend: 0x0, symName: _update_puff, symObjAddr: 0x7ED4, symBinAddr: 0x10000AA28, symSize: 0x43C }
+  - { offset: 0x911, size: 0x8, addend: 0x0, symName: _update_player, symObjAddr: 0x8310, symBinAddr: 0x10000AE64, symSize: 0x13CC }
+  - { offset: 0x945, size: 0x8, addend: 0x0, symName: _init_asteroid_explosion, symObjAddr: 0x96DC, symBinAddr: 0x10000C230, symSize: 0x2C8 }
+  - { offset: 0x96B, size: 0x8, addend: 0x0, symName: _delete_projectile, symObjAddr: 0x99A4, symBinAddr: 0x10000C4F8, symSize: 0x198 }
+  - { offset: 0x9A0, size: 0x8, addend: 0x0, symName: _split_asteroid, symObjAddr: 0x9B3C, symBinAddr: 0x10000C690, symSize: 0x1358 }
+  - { offset: 0xA4B, size: 0x8, addend: 0x0, symName: _delete_asteroid, symObjAddr: 0xAE94, symBinAddr: 0x10000D9E8, symSize: 0x198 }
+  - { offset: 0xA80, size: 0x8, addend: 0x0, symName: _delete_puff, symObjAddr: 0xB02C, symBinAddr: 0x10000DB80, symSize: 0x204 }
+  - { offset: 0xAB5, size: 0x8, addend: 0x0, symName: _init_explosion, symObjAddr: 0xB230, symBinAddr: 0x10000DD84, symSize: 0x260 }
+  - { offset: 0xACB, size: 0x8, addend: 0x0, symName: _update_explosion, symObjAddr: 0xB490, symBinAddr: 0x10000DFE4, symSize: 0x9C }
+  - { offset: 0xAE1, size: 0x8, addend: 0x0, symName: _update_asteroid_explosion, symObjAddr: 0xB52C, symBinAddr: 0x10000E080, symSize: 0x198 }
+  - { offset: 0xAF7, size: 0x8, addend: 0x0, symName: _on_idle, symObjAddr: 0xB6C4, symBinAddr: 0x10000E218, symSize: 0x18 }
+  - { offset: 0xB0D, size: 0x8, addend: 0x0, symName: _free_puff_linked_list, symObjAddr: 0xB6DC, symBinAddr: 0x10000E230, symSize: 0x11C }
+  - { offset: 0xB33, size: 0x8, addend: 0x0, symName: _init_black_hole, symObjAddr: 0xB7F8, symBinAddr: 0x10000E34C, symSize: 0x850 }
+  - { offset: 0xB59, size: 0x8, addend: 0x0, symName: _update_black_hole, symObjAddr: 0xC058, symBinAddr: 0x10000EBAC, symSize: 0x7C0 }
 ...

@@ -31,8 +31,8 @@
 #define DEATH_TIME 300
 
 // CHANGE THE RESOLUTION TO WHAT EVER YOU ARE USING
-#define SCREEN_WIDTH 2560
-#define SCREEN_HEIGHT 1440
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 
 // STUCTURE DECLARATION
 // Spaceship Structure
@@ -832,8 +832,8 @@ void delete_projectile(projectile_t *bullet)
 
     if (projectiles == bullet)
     {
-
-        projectiles = NULL;
+        // advance head to next node instead of nulling the entire list
+        projectiles = projectiles->next_projectile;
         return;
     }
 
@@ -852,8 +852,8 @@ void delete_asteroid(asteroid_t *enemy)
 
     if (asteroids == enemy)
     {
-
-        asteroids = NULL;
+        // advance head to next node instead of nulling the entire list
+        asteroids = asteroids->next_asteroid;
         return;
     }
 
@@ -886,8 +886,8 @@ void delete_puff(particle_puff_t *puff)
 
     if (puffs == puff)
     {
-
-        puffs = NULL;
+        // advance head to next node insted of nulling the entire list
+        puffs = puffs->next_puff;
         return;
     }
 
