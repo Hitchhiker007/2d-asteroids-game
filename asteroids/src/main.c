@@ -169,8 +169,9 @@ void delete_projectile(projectile_t *bullet);
 void split_asteroid(asteroid_t *enemy);
 void delete_asteroid(asteroid_t *enemy);
 void init_particle_puff(particle_puff_t *puff);
+void delete_puff(particle_puff_t *puff);
 void update_puff(particle_puff_t *);
-void free_puff();
+void free_puff_linked_list();
 void init_black_hole();
 void update_black_hole();
 
@@ -202,7 +203,7 @@ int main(int argc, char **argv)
     glutMainLoop();
     free_projectiles(projectiles);
     free_asteroids(asteroids);
-    free_puff();
+    free_puff_linked_list();
     return (EXIT_SUCCESS);
 }
 
@@ -309,7 +310,6 @@ void display(void)
         {
             glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c2);
         }
-        glEnd();
         if (explosion.radius > DEATH_TIME)
         {
 
@@ -321,7 +321,6 @@ void display(void)
             {
                 glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c3);
             }
-            glEnd();
         }
     }
 
@@ -366,11 +365,9 @@ void display(void)
         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c);
     }
     glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, score_s);
-    glEnd();
     int err;
     while ((err = glGetError()) != GL_NO_ERROR)
         printf("display: %s\n", gluErrorString(err));
-    glEnd();
     glutSwapBuffers();
 }
 void on_reshape(int w, int h)
@@ -393,7 +390,7 @@ void keyboard(unsigned char key, int x, int y)
         case 'q':
             free_projectiles(projectiles);
             free_asteroids(asteroids);
-            free_puff();
+            free_puff_linked_list();
             exit(EXIT_SUCCESS);
             break;
         default:
@@ -518,13 +515,10 @@ void update_game_state()
     particle_puff_t *puff = puffs;
     while (puff != NULL)
     {
+        // save next pointer before calling update_puff as it may free the current node
+        particle_puff_t *next = puff->next_puff;
         update_puff(puff);
-        if (puff == NULL)
-        {
-            free(puff);
-            break;
-        }
-        puff = puff->next_puff;
+        puff = next;
     }
 
     // These are seperated because they are unique and are not stored within a linked list
@@ -621,6 +615,12 @@ void update_puff(particle_puff_t *puff)
     if (puff->alpha > 0)
     {
         puff->alpha = puff->alpha - 0.01;
+    }
+    else
+    {
+        // free puff from memory when fully faded to prevent memory growth
+        delete_puff(puff);
+        free(puff);
     }
 }
 
@@ -878,7 +878,29 @@ void init_particle_puff(particle_puff_t *puff)
     puffs = puff;
 }
 
-void free_puff()
+// remove a single puff node from the linked list without freeing it
+void delete_puff(particle_puff_t *puff)
+{
+
+    particle_puff_t *hold = puffs;
+
+    if (puffs == puff)
+    {
+
+        puffs = NULL;
+        return;
+    }
+
+    while (hold->next_puff != puff)
+    {
+        hold = hold->next_puff;
+    }
+    hold->next_puff = puff->next_puff;
+    puff = NULL;
+}
+
+// free entire puff linked list on exit
+void free_puff_linked_list()
 {
 
     particle_puff_t *temp;
