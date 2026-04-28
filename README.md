@@ -54,8 +54,11 @@ gcc src/main.c -framework OpenGL -framework GLUT -o asteroids -fsanitize=address
 
 ## Screenshots
 
-![Black Hole Screenshot](screenshots/blackhole.png)
-![Death Screenshot](screenshots/death.png)
+![Death](screenshots/death.png)
+*Game over*
+
+![Black Hole](screenshots/blackhole.png)
+*Black hole*
 
 ---
 
